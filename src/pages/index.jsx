@@ -1,31 +1,21 @@
 import React from 'react'
+import { Router } from '@reach/router' /* eslint-disable-line */
 import { Link } from 'gatsby'
 
-import HomePage from './home'
-
-// import { GlobalStyles } from './styles';
-
-// import Layout from '../components/layout'
-// import Image from '../components/image'
-
-// const IndexPage = () => (
-//   <Layout>
-//     <SEO title="Home" />
-//     <h1>Hi people</h1>
-//     <p>Welcome to your new Gatsby site.</p>
-//     <p>Now go build something great.</p>
-//     <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-//       <Image />
-//     </div>
-//     <Link to="/page-2/">Go to page 2</Link>
-//   </Layout>
-// )
+import PrivateRoute from '../components/privateRoute'
+import TeamPortalPage from './team-portal'
+import LoginPage from './login'
 
 
 const IndexPage = () => (
   <>
-    <HomePage />
+    <Router>
+      <PrivateRoute path="/" component={TeamPortalPage} />
+
+      <LoginPage path="/login" />
+    </Router>
   </>
 )
+
 
 export default IndexPage

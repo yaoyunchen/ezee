@@ -13,22 +13,34 @@ const content = {
 }
 
 
-const TeamPortal = () => (
-  <GlobalStyles.Page id="team-portal">
-    <SEO title={content.seo.title} />
+class TeamPortalPage extends React.Component {
+  constructor(props) {
+    super(props)
+    if (window.location.pathname === '/team-portal') window.location.replace('/')
+    return null
+  }
 
-    <Navigation />
 
-    <Container>
-      <Row>
-        <Col xs={12}>
-          <p>
-            Stuff
-          </p>
-        </Col>
-      </Row>
-    </Container>
-  </GlobalStyles.Page>
-)
+  render() {
+    return (
+      <GlobalStyles.Page id="team-portal">
+        <SEO title={content.seo.title} />
 
-export default TeamPortal
+        <Navigation />
+
+        <Container>
+          <Row>
+            <Col xs={12}>
+              <p>
+                Stuff
+              </p>
+            </Col>
+          </Row>
+        </Container>
+      </GlobalStyles.Page>
+    );
+  }
+}
+
+
+export default TeamPortalPage

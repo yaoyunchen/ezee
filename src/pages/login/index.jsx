@@ -35,7 +35,7 @@ const Login = () => (
 
                   <Col xs={12} md={4}>
                     <form>
-                      asd
+                      Login form goes here
                     </form>
                   </Col>
 

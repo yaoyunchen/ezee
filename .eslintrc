@@ -1,4 +1,7 @@
 {
+  "env": {
+    "browser": true
+  },
   "extends": "airbnb",
   "parser": "babel-eslint",
   "parserOptions": {
@@ -26,14 +29,18 @@
         "ignoreTopLevelFunctions": true
       }
     ],
+    "no-confusing-arrow": 0,
     "no-console": 1,
     "no-debugger": 1,
+    "no-param-reassign": 0,
     "no-undef": 1,
     "no-unused-vars": 1,
     "no-var": 1,
     "operator-linebreak": 0,
+    "prefer-object-spread": 0,
     "react/destructuring-assignment": 0,
     "react/jsx-one-expression-per-line": 0,
+    "react/jsx-props-no-spreading": 0,
     "react/no-unused-state": 1,
     "semi": 0
   }
