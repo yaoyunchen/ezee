@@ -5,21 +5,34 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@nfront/global-styles": "^1.2.1",
+    "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.15.11",
     "gatsby-image": "^2.2.17",
+    "gatsby-plugin-global-styles": "^1.0.17",
     "gatsby-plugin-manifest": "^2.2.15",
     "gatsby-plugin-offline": "^2.2.10",
     "gatsby-plugin-react-helmet": "^3.1.6",
     "gatsby-plugin-sharp": "^2.2.20",
+    "gatsby-plugin-styled-components": "^3.1.5",
     "gatsby-source-filesystem": "^2.1.21",
     "gatsby-transformer-sharp": "^2.2.13",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
+    "react-awesome-styled-grid": "^2.3.1",
     "react-dom": "^16.9.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
-    "prettier": "^1.18.2"
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "prettier": "^1.18.2",
+    "prettier-eslint": "^9.0.0"
   },
   "keywords": [
     "gatsby"
@@ -31,7 +44,9 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
+    "lint": "eslint 'src' --config .eslintrc --ext .js,.jsx",
+    "lint:fix": "npm run lint --fix"
   },
   "repository": {
     "type": "git",
